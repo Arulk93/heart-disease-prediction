@@ -103,33 +103,33 @@ if st.sidebar.button("Predict 🩺"):
     })
 
     # Plotting user input against the distribution of the data
-    fig, axes = plt.subplots(1, 3, figsize=(7, 2.5))  # Adjusted figure size to make the chart smaller
+    fig, axes = plt.subplots(1, 3, figsize=(7, 2))  # Adjusted figure size to make the chart smaller
 
     # Age Distribution
     axes[0].hist(heart_data['age'], bins=30, color='lightblue', edgecolor='black', alpha=0.7)
     axes[0].axvline(user_input['age'], color='red', linestyle='dashed', linewidth=2, label="User Input")
     axes[0].set_title("Age Distribution", fontsize=8)
-    axes[0].set_xlabel("Age (years)", fontsize=8)
-    axes[0].set_ylabel("Frequency", fontsize=8)
-    axes[0].tick_params(axis='both', labelsize=8)  # Font size for ticks
+    axes[0].set_xlabel("Age (years)", fontsize=6)
+    axes[0].set_ylabel("Frequency", fontsize=6)
+    axes[0].tick_params(axis='both', labelsize=6)  # Font size for ticks
     axes[0].legend(fontsize=5)
 
     # Cholesterol Distribution
     axes[1].hist(heart_data['cholesterol'], bins=30, color='lightgreen', edgecolor='black', alpha=0.7)
     axes[1].axvline(user_input['cholesterol'], color='red', linestyle='dashed', linewidth=2, label="User Input")
     axes[1].set_title("Cholesterol Distribution", fontsize=8)
-    axes[1].set_xlabel("Cholesterol (mg/dL)", fontsize=8)
-    axes[1].set_ylabel("Frequency", fontsize=8)
-    axes[1].tick_params(axis='both', labelsize=8)  # Font size for ticks
+    axes[1].set_xlabel("Cholesterol (mg/dL)", fontsize=6)
+    axes[1].set_ylabel("Frequency", fontsize=6)
+    axes[1].tick_params(axis='both', labelsize=6)  # Font size for ticks
     axes[1].legend(fontsize=5)
 
     # Resting BP Distribution
     axes[2].hist(heart_data['restingbp'], bins=30, color='lightcoral', edgecolor='black', alpha=0.7)
     axes[2].axvline(user_input['restingbp'], color='red', linestyle='dashed', linewidth=2, label="User Input")
     axes[2].set_title("Resting Blood Pressure Distribution", fontsize=8)
-    axes[2].set_xlabel("Resting BP (mm Hg)", fontsize=8)
-    axes[2].set_ylabel("Frequency", fontsize=8)
-    axes[2].tick_params(axis='both', labelsize=8)  # Font size for ticks
+    axes[2].set_xlabel("Resting BP (mm Hg)", fontsize=6)
+    axes[2].set_ylabel("Frequency", fontsize=6)
+    axes[2].tick_params(axis='both', labelsize=6)  # Font size for ticks
     axes[2].legend(fontsize=5)
 
     st.pyplot(fig)
