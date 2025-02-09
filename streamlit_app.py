@@ -4,6 +4,8 @@ import joblib
 import numpy as np
 import matplotlib.pyplot as plt
 
+st.set_page_config(page_title="Heart Disease Prediction", page_icon="❤️", layout="wide")
+
 # Load the trained model
 @st.cache_resource()
 def load_model():
@@ -20,7 +22,6 @@ correct_feature_order = [
 ]
 
 # Streamlit UI
-st.set_page_config(page_title="Heart Disease Prediction", page_icon="❤️", layout="wide")
 st.title("❤️ Heart Disease Prediction Dashboard ❤️")
 st.markdown("A simple tool to predict the likelihood of heart disease.")
 
