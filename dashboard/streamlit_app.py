@@ -132,6 +132,9 @@ if st.sidebar.button("Predict 🩺"):
     axes[2].tick_params(axis='both', labelsize=6)  # Font size for ticks
     axes[2].legend(fontsize=5)
 
+    # Adjust layout to prevent overlap
+    plt.tight_layout()
+
     st.pyplot(fig)
 
 
