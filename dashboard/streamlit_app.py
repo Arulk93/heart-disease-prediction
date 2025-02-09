@@ -103,7 +103,7 @@ if st.sidebar.button("Predict 🩺"):
     })
 
     # Plotting user input against the distribution of the data
-    fig, axes = plt.subplots(1, 3, figsize=(8, 2.5))  # Adjusted figure size to make the chart smaller
+    fig, axes = plt.subplots(1, 3, figsize=(7, 2.5))  # Adjusted figure size to make the chart smaller
 
     # Age Distribution
     axes[0].hist(heart_data['age'], bins=30, color='lightblue', edgecolor='black', alpha=0.7)
